@@ -1,0 +1,15 @@
+.contact_card{
+  width: 50%;
+  height: 200px;
+  background: yellow;
+  display: inline-block;
+}
+.card{
+  vertical-align: top;
+  height: 250px;
+  width: 250px;
+  background-color: red;
+  text-align: center;
+  display: inline-block;
+  margin: 10px;
+}

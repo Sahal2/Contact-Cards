@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="contact_card.css">
+
+
+   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript">
+    function addinfo(){
+      var first = $('#first').val();
+      var last = $('#last').val();
+      var email = $('#email').val();
+      var phon = $('#phon').val();
+      var des = $('#description').val();
+      $('#contact_card').append('<div class=card><h1>'+first+" "+last+"</h1>"+"<p>"+email+"</p><p>"+phon+'</p><p>'+des+'</p></button></div>');
+    }
+    function showmore(){
+      $('p').hide();
+      $('.card').click(function(){
+        $(this).children('p').show();
+      });
+    }
+    $(document).ready(function(){
+        $('form').submit(function(){
+          addinfo();
+          showmore();
+          return false;
+       });
+
+});
+
+   </script>
+  <body>
+     <form class="contact_card" action="index.html" method="post">
+         First Name: <input id='first' type="text" name="first_name" value="">
+         Last Name <input id='last' type="text" name="last_name" value="">
+         Email Address: <input id='email' type="email" name="email" value="">
+         Contact No: <input id='phon' type="text" name="contact" value="">
+         <textarea id='description' name="description" rows="8" cols="80" form="contact_card"></textarea>
+         <input type="submit" value="Submit">
+     </form>
+     <div id="contact_card">
+
+     </div>
+
+ </body>
+</html>
